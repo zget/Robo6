@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+        <form action="#"
+              th:action="@{/roboform}"
+              th:object="${resume}"
+              method="post">
+
+           Name: <input type="text" th:field="*{name}"/><br/>
+
+            email: <input type="text" th:field="*{email}"/><br/>
+            education: <textarea rows="3" th:field="*{education}"/><br/>
+            experience: <textarea rows="3" th:field="*{experience}"/><br/>
+            skill: <textarea rows="3" th:field="*{skill}"/><br/>
+            skill_rating: <input type="number" th:field="*{skill_rating}"/><br/>
+
+
+                <input type="submit" value="Submit"/>
+        </form>
+
+</body>
+</html>
