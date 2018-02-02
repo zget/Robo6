@@ -10,13 +10,46 @@
               th:object="${resume}"
               method="post">
 
-           Name: <input type="text" th:field="*{name}"/><br/>
+
+           Name: <input type="text" th:field="*{name}"/>
+            <span th:if="${#fields.hasErrors('name')}"
+                  th:errors="*{name}"></span><br/>
+
 
             email: <input type="text" th:field="*{email}"/><br/>
-            education: <textarea rows="3" th:field="*{education}"/><br/>
+            <span th:if="${#fields.hasErrors('email')}"
+                  th:errors="*{email}"></span><br/>
+
+            <H4>Education </H4>
+            education: <input type="text" th:field="*{education}"/><br/>
+            <span th:if="${#fields.hasErrors('education')}"
+                  th:errors="*{education}"></span><br/>
+            gradution year:<input type="text" th:field="*{grad_year}"/><br/>
+            <span th:if="${#fields.hasErrors('grad_year')}"
+                  th:errors="*{grad_year}"></span><br/>
+
+            <h4>Experiance</h4>
             experience: <textarea rows="3" th:field="*{experience}"/><br/>
+            <span th:if="${#fields.hasErrors('experience')}"
+                  th:errors="*{experience}"></span><br/>
+            company: <input type="text" th:field="*{company}"/><br/>
+            <span th:if="${#fields.hasErrors('company')}"
+                  th:errors="*{company}"></span><br/>
+            year of service :<input type="text" th:field="*{years_of_service}"/><br/>
+            <span th:if="${#fields.hasErrors('years_of_service')}"
+                  th:errors="*{years_of_service}"></span><br/>
+            <h4>Skills</h4>
             skill: <textarea rows="3" th:field="*{skill}"/><br/>
-            skill_rating: <input type="number" th:field="*{skill_rating}"/><br/>
+            <span th:if="${#fields.hasErrors('skill')}"
+                  th:errors="*{skill}"></span><br/>
+            programming: <input type="text" th:field="*{programming}"/><br/>
+            <span th:if="${#fields.hasErrors('programming')}"
+                  th:errors="*{programming}"></span><br/>
+            rating: <input type="number" th:field="*{prating}"/><br/>
+            MS Office :<input type="text" th:field="*{msOffice}"/><br/>
+            <span th:if="${#fields.hasErrors('msOffice')}"
+                  th:errors="*{msOffice}"></span><br/>
+            rating: <input type="number" th:field="*{mrating}"/><br/>
 
 
                 <input type="submit" value="Submit"/>

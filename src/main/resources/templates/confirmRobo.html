@@ -5,13 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-        <p th:inline="text"> Name is [[${resume.name}]].<br/>
+        <p th:inline="text">
+        Name : [[${resume.name}]].<br/>
+        email :[[${resume.email}]].<br/><br/>
 
-            email is [[${resume.email}]].<br/><br/>
-           education is [[${resume.education}]].<br/><br/>
-            experience is [[${resume.experience}]].<br/><br/>
-           skill is [[${resume.skill}]].<br/>
-            skill_rating is [[${resume.skill_rating}]].<br/>
+        <h4>Education</h4>
+            education : [[${resume.education}]].<br/>
+            Graduation Year:[[${resume.grad_year}]].<br/>
+
+        <h4>Experience</h4>
+            experience : [[${resume.experience}]].<br/>
+            company:[[${resume.company}]].<br/>
+            Years of service:[[${resume.years_of_service}]].<br/>
+
+        <h4>Skills</h4>
+            skill : [[${resume.skill}]].<br/>
+            programming:[[${resume.programming}]].<br/>
+            rating : [[${resume.prating}]].<br/>
+            MS Office:[[${resume.msOffice}]].<br/>
+            rating : [[${resume.mrating}]].<br/>
 
         </p>
 </body>
